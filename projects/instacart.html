@@ -4,210 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instacart Analysis | Joseph Adamski</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.6;
-            color: #333;
-            background: #fafafa;
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 960px;
-        }
-        header {
-            padding: 20px 0 40px 0;
-            border-bottom: 1px solid #e5e5e5;
-            margin-bottom: 30px;
-        }
-        header h1 {
-            font-size: 28px;
-            font-weight: normal;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        header h1 a {
-            color: #333;
-            text-decoration: none;
-        }
-        header h1 a:hover {
-            color: #267CB9;
-        }
-        header p.tagline {
-            color: #666;
-            font-size: 14px;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            color: #267CB9;
-            text-decoration: none;
-            margin-right: 20px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        h1 { font-size: 24px; font-weight: normal; margin: 30px 0 15px 0; color: #333; }
-        h2 { font-size: 18px; font-weight: bold; margin: 25px 0 12px 0; color: #333; border-bottom: 1px solid #e5e5e5; padding-bottom: 8px; }
-        h3 { font-size: 16px; font-weight: bold; margin: 20px 0 10px 0; color: #333; }
-        p { margin-bottom: 15px; text-align: justify; }
-        a { color: #267CB9; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        
-        .tech-tags {
-            margin: 15px 0 25px 0;
-        }
-        .tech-tags strong {
-            color: #333;
-        }
-        
-        .metrics-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0 30px 0;
-        }
-        .metric {
-            background: #f5f5f5;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            padding: 15px 20px;
-            text-align: center;
-            flex: 1;
-            min-width: 140px;
-        }
-        .metric .value {
-            font-size: 22px;
-            font-weight: bold;
-            color: #267CB9;
-        }
-        .metric .label {
-            font-size: 12px;
-            color: #666;
-            margin-top: 3px;
-        }
-        
-        .process-step {
-            background: #f9f9f9;
-            border-left: 3px solid #267CB9;
-            padding: 12px 15px;
-            margin: 12px 0;
-        }
-        .process-step strong {
-            color: #333;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0 25px 0;
-            font-size: 14px;
-        }
-        th, td {
-            padding: 10px 12px;
-            text-align: left;
-            border-bottom: 1px solid #e5e5e5;
-        }
-        th {
-            background: #f5f5f5;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .visual {
-            margin: 25px 0;
-            text-align: center;
-        }
-        .visual img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-        }
-        .visual .caption {
-            font-size: 13px;
-            color: #666;
-            margin-top: 8px;
-            font-style: italic;
-        }
-        
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 25px 0;
-        }
-        .visual-grid .visual {
-            margin: 0;
-        }
-        
-        .insight {
-            background: #f0f7fb;
-            border-left: 3px solid #267CB9;
-            padding: 12px 15px;
-            margin: 15px 0;
-        }
-        .insight p {
-            margin: 0;
-        }
-        
-        ul {
-            margin: 15px 0 20px 25px;
-        }
-        ul li {
-            margin-bottom: 8px;
-        }
-        
-        .btn-group {
-            margin: 25px 0;
-        }
-        .btn-group a {
-            display: inline-block;
-            padding: 8px 18px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #267CB9;
-            border-radius: 4px;
-            font-size: 13px;
-        }
-        .btn-group a.primary {
-            background: #267CB9;
-            color: white;
-        }
-        .btn-group a.primary:hover {
-            background: #1a5a8a;
-            text-decoration: none;
-        }
-        .btn-group a.secondary {
-            background: white;
-            color: #267CB9;
-        }
-        .btn-group a.secondary:hover {
-            background: #f5f5f5;
-            text-decoration: none;
-        }
-        
-        hr {
-            border: none;
-            border-top: 1px solid #e5e5e5;
-            margin: 30px 0;
-        }
-        
-        footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e5e5;
-            font-size: 12px;
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
         <h1><a href="../index.html">Joseph Adamski | Data Analyst</a></h1>
-        <p class="tagline">Data Analyst Portfolio showcasing analytics projects in Python, SQL, Tableau, and Excel</p>
+        <p>Data Analyst Portfolio showcasing analytics projects in Python, SQL, Tableau, and Excel</p>
         <nav>
             <a href="../index.html">Projects</a>
             <a href="../about.html">About Me</a>
@@ -215,204 +17,219 @@
         </nav>
     </header>
 
-    <h1>Instacart Customer Behaviour Analysis</h1>
-    
-    <p class="tech-tags"><strong>Tools:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn, SciPy), Jupyter Notebook</p>
+    <main>
+        <section class="project-header">
+            <h1>Instacart Customer Behaviour Analysis</h1>
+            <p><strong>Tools:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn, SciPy), Jupyter Notebook</p>
+        </section>
 
-    <h2>Project Overview</h2>
-    
-    <p>Instacart, a prominent online grocery platform, sought to refine its marketing strategies by gaining deeper insight into customer purchasing patterns and product demand. This comprehensive analysis examined over 32 million transaction records to uncover behavioural trends, identify distinct customer segments, and provide actionable recommendations for targeted marketing initiatives.</p>
-    
-    <p>The project encompassed the complete data analytics workflow, from initial data acquisition and rigorous quality assurance through advanced feature engineering and customer profiling, culminating in strategic recommendations grounded in empirical evidence.</p>
+        <section>
+            <h2>Project Overview</h2>
+            <p>Instacart, a prominent online grocery platform, sought to refine its marketing strategies by gaining deeper insight into customer purchasing patterns and product demand. This comprehensive analysis examined over 32 million transaction records to uncover behavioural trends, identify distinct customer segments, and provide actionable recommendations for targeted marketing initiatives.</p>
+            <p>The project encompassed the complete data analytics workflow, from initial data acquisition and rigorous quality assurance through advanced feature engineering and customer profiling, culminating in strategic recommendations grounded in empirical evidence.</p>
+        </section>
 
-    <h2>Data Summary</h2>
-    
-    <div class="metrics-container">
-        <div class="metric">
-            <div class="value">32.4M</div>
-            <div class="label">Transaction Records</div>
-        </div>
-        <div class="metric">
-            <div class="value">206,209</div>
-            <div class="label">Unique Customers</div>
-        </div>
-        <div class="metric">
-            <div class="value">49,693</div>
-            <div class="label">Products</div>
-        </div>
-        <div class="metric">
-            <div class="value">3.4M</div>
-            <div class="label">Orders Analysed</div>
-        </div>
-    </div>
-    
-    <p>The analysis integrated multiple data sources including order histories, product catalogues spanning 134 aisles and 21 departments, and customer demographic information. This comprehensive dataset enabled a thorough examination of purchasing behaviour across temporal, geographic, and demographic dimensions.</p>
+        <section>
+            <h2>Data Summary</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-value">32.4M</span>
+                    <span class="metric-label">Transaction Records</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">206,209</span>
+                    <span class="metric-label">Unique Customers</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">49,693</span>
+                    <span class="metric-label">Products</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">3.4M</span>
+                    <span class="metric-label">Orders Analysed</span>
+                </div>
+            </div>
+            <p>The analysis integrated multiple data sources including order histories, product catalogues spanning 134 aisles and 21 departments, and customer demographic information. This comprehensive dataset enabled a thorough examination of purchasing behaviour across temporal, geographic, and demographic dimensions.</p>
+        </section>
 
-    <h2>Analytical Process</h2>
-    
-    <div class="process-step">
-        <strong>Data Acquisition and Initial Assessment:</strong> Imported six distinct datasets comprising orders, products, departments, aisles, order details, and customer information. Conducted preliminary exploration to understand data structure and establish the analytical foundation.
-    </div>
+        <section>
+            <h2>Analytical Process</h2>
+            
+            <div class="process-step">
+                <h3>Data Acquisition and Initial Assessment</h3>
+                <p>Imported six distinct datasets comprising orders, products, departments, aisles, order details, and customer information. Conducted preliminary exploration to understand data structure and establish the analytical foundation.</p>
+            </div>
 
-    <div class="process-step">
-        <strong>Data Quality Assurance:</strong> Executed comprehensive consistency checks across all datasets. Identified and addressed 16 missing product names and 5 duplicate product records. Discovered 206,209 records with missing "days since prior order" values, which upon investigation corresponded precisely to first time orders. Created a boolean flag to preserve this valuable customer acquisition data.
-    </div>
+            <div class="process-step">
+                <h3>Data Quality Assurance</h3>
+                <p>Executed comprehensive consistency checks across all datasets. Identified and addressed 16 missing product names and 5 duplicate product records. Discovered 206,209 records with missing "days since prior order" values, which upon investigation corresponded precisely to first time orders. Created a boolean flag to preserve this valuable customer acquisition data.</p>
+            </div>
 
-    <div class="process-step">
-        <strong>Data Integration:</strong> Performed multiple merge operations to consolidate the disparate datasets. The primary merge combined order details with product information, yielding 32,404,859 matched records. Subsequently integrated customer demographic data for 206,209 unique customers.
-    </div>
+            <div class="process-step">
+                <h3>Data Integration</h3>
+                <p>Performed multiple merge operations to consolidate the disparate datasets. The primary merge combined order details with product information, yielding 32,404,859 matched records. Subsequently integrated customer demographic data for 206,209 unique customers.</p>
+            </div>
 
-    <div class="process-step">
-        <strong>Feature Engineering:</strong> Derived multiple analytical variables to support customer segmentation. Created temporal flags identifying busiest days (Saturday and Sunday) and peak ordering periods (10:00 to 16:00). Developed price categorisation labels distinguishing low range (under $5), mid range ($5 to $15), and high range (over $15) products.
-    </div>
+            <div class="process-step">
+                <h3>Feature Engineering</h3>
+                <p>Derived multiple analytical variables to support customer segmentation. Created temporal flags identifying busiest days (Saturday and Sunday) and peak ordering periods (10:00 to 16:00). Developed price categorisation labels distinguishing low range (under $5), mid range ($5 to $15), and high range (over $15) products.</p>
+            </div>
 
-    <div class="process-step">
-        <strong>Customer Behaviour Profiling:</strong> Utilised the transform() function to calculate user level aggregations whilst preserving the granular transaction structure. Engineered six behavioural flags: maximum order count, loyalty classification, average purchase price, spending category, median days between orders, and order frequency classification.
-    </div>
+            <div class="process-step">
+                <h3>Customer Behaviour Profiling</h3>
+                <p>Utilised the transform() function to calculate user level aggregations whilst preserving the granular transaction structure. Engineered six behavioural flags: maximum order count, loyalty classification, average purchase price, spending category, median days between orders, and order frequency classification.</p>
+            </div>
 
-    <div class="process-step">
-        <strong>Regional and Demographic Analysis:</strong> Assigned customers to four geographic regions based on state data. Created comprehensive customer profiles combining age, income, and family status dimensions. Removed personally identifiable information prior to final analysis to ensure data security compliance.
-    </div>
+            <div class="process-step">
+                <h3>Regional and Demographic Analysis</h3>
+                <p>Assigned customers to four geographic regions based on state data. Created comprehensive customer profiles combining age, income, and family status dimensions. Removed personally identifiable information prior to final analysis to ensure data security compliance.</p>
+            </div>
+        </section>
 
-    <h2>Key Findings</h2>
+        <section>
+            <h2>Key Findings</h2>
 
-    <h3>Temporal Ordering Patterns</h3>
-    
-    <p>Analysis of ordering behaviour across the 24 hour cycle revealed distinct patterns in customer activity. Orders concentrate heavily during daytime hours, with peak activity occurring between 10:00 and 15:00.</p>
+            <h3>Temporal Ordering Patterns</h3>
+            <p>Analysis of ordering behaviour across the 24 hour cycle revealed distinct patterns in customer activity. Orders concentrate heavily during daytime hours, with peak activity occurring between 10:00 and 15:00.</p>
 
-    <div class="visual">
-        <img src="../assets/instacart/order_hour_histogram.png" alt="Distribution of Orders by Hour of Day">
-        <p class="caption">Figure 1: Order volume peaks between 10:00 and 15:00, with minimal activity from 02:00 to 06:00</p>
-    </div>
+            <figure class="visual">
+                <img src="../assets/instacart/order_hour_histogram.png" alt="Distribution of Orders by Hour of Day">
+                <figcaption>Figure 1: Order volume peaks between 10:00 and 15:00, with minimal activity from 02:00 to 06:00</figcaption>
+            </figure>
 
-    <div class="insight">
-        <p><strong>Insight:</strong> The concentration of 18.7 million orders during peak hours (10:00 to 16:00) compared to just 887,000 during quiet periods (00:00 to 07:00) suggests optimal windows for promotional campaigns and operational scheduling.</p>
-    </div>
+            <div class="insight-box">
+                <p><strong>Insight:</strong> The concentration of 18.7 million orders during peak hours (10:00 to 16:00) compared to just 887,000 during quiet periods (00:00 to 07:00) suggests optimal windows for promotional campaigns and operational scheduling.</p>
+            </div>
 
-    <h3>Customer Loyalty Distribution</h3>
-    
-    <p>Segmentation of customers based on lifetime order frequency revealed that Regular customers represent the largest segment, followed by Loyal customers and New customers. This distribution indicates that the majority of Instacart's transaction volume derives from established, returning customers.</p>
+            <h3>Customer Loyalty Distribution</h3>
+            <p>Segmentation of customers based on lifetime order frequency revealed that Regular customers represent the largest segment, followed by Loyal customers and New customers. This distribution indicates that the majority of Instacart's transaction volume derives from established, returning customers.</p>
 
-    <div class="visual">
-        <img src="../assets/instacart/loyalty_distribution_bar.png" alt="Distribution of Orders by Customer Loyalty">
-        <p class="caption">Figure 2: Regular customers generate the highest order volume, demonstrating strong customer retention</p>
-    </div>
+            <figure class="visual">
+                <img src="../assets/instacart/loyalty_distribution_bar.png" alt="Distribution of Orders by Customer Loyalty">
+                <figcaption>Figure 2: Regular customers generate the highest order volume, demonstrating strong customer retention</figcaption>
+            </figure>
 
-    <table>
-        <tr>
-            <th>Segment</th>
-            <th>Classification Criteria</th>
-            <th>Order Volume</th>
-        </tr>
-        <tr>
-            <td>Regular Customers</td>
-            <td>11 to 40 lifetime orders</td>
-            <td>15,876,776 records</td>
-        </tr>
-        <tr>
-            <td>Loyal Customers</td>
-            <td>Over 40 lifetime orders</td>
-            <td>10,284,093 records</td>
-        </tr>
-        <tr>
-            <td>New Customers</td>
-            <td>10 or fewer lifetime orders</td>
-            <td>6,243,990 records</td>
-        </tr>
-    </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Segment</th>
+                        <th>Classification Criteria</th>
+                        <th>Order Volume</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regular Customers</td>
+                        <td>11 to 40 lifetime orders</td>
+                        <td>15,876,776 records</td>
+                    </tr>
+                    <tr>
+                        <td>Loyal Customers</td>
+                        <td>Over 40 lifetime orders</td>
+                        <td>10,284,093 records</td>
+                    </tr>
+                    <tr>
+                        <td>New Customers</td>
+                        <td>10 or fewer lifetime orders</td>
+                        <td>6,243,990 records</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h3>Customer Profile Segmentation</h3>
-    
-    <p>Comprehensive customer profiling based on age, income, and family status identified six distinct segments. Seniors with Dependents emerged as the dominant profile, followed by Established Families. These family oriented segments collectively represent the majority of transaction volume.</p>
+            <h3>Customer Profile Segmentation</h3>
+            <p>Comprehensive customer profiling based on age, income, and family status identified six distinct segments. Seniors with Dependents emerged as the dominant profile, followed by Established Families. These family oriented segments collectively represent the majority of transaction volume.</p>
 
-    <div class="visual">
-        <img src="../assets/instacart/customer_profile_distribution.png" alt="Distribution of Customer Profiles">
-        <p class="caption">Figure 3: Seniors with Dependents and Established Families represent the largest customer segments</p>
-    </div>
+            <figure class="visual">
+                <img src="../assets/instacart/customer_profile_distribution.png" alt="Distribution of Customer Profiles">
+                <figcaption>Figure 3: Seniors with Dependents and Established Families represent the largest customer segments</figcaption>
+            </figure>
 
-    <h3>Regional Profile Distribution</h3>
-    
-    <p>Analysis of customer profiles across geographic regions revealed consistent patterns. Seniors with Dependents represent approximately 37% of customers in each region. Established Families maintain a steady 23 to 24% share across all regions, suggesting marketing strategies can be applied nationally with regional fine tuning.</p>
+            <h3>Regional Profile Distribution</h3>
+            <p>Analysis of customer profiles across geographic regions revealed consistent patterns. Seniors with Dependents represent approximately 37% of customers in each region. Established Families maintain a steady 23 to 24% share across all regions, suggesting marketing strategies can be applied nationally with regional fine tuning.</p>
 
-    <div class="visual">
-        <img src="../assets/instacart/profiles_by_region.png" alt="Customer Profile Distribution by Region">
-        <p class="caption">Figure 4: Customer profile distribution remains remarkably consistent across all four U.S. regions</p>
-    </div>
+            <figure class="visual">
+                <img src="../assets/instacart/profiles_by_region.png" alt="Customer Profile Distribution by Region">
+                <figcaption>Figure 4: Customer profile distribution remains remarkably consistent across all four U.S. regions</figcaption>
+            </figure>
 
-    <h3>Spending Behaviour Analysis</h3>
-    
-    <p>A significant disparity emerged in average product prices across customer segments. Loyal customers demonstrated a mean purchase price of $10.39, whilst new customers averaged $13.29 per product. This $2.90 differential suggests that established customers prioritise value and everyday essentials, whereas new customers may experiment with premium offerings.</p>
+            <h3>Spending Behaviour Analysis</h3>
+            <p>A significant disparity emerged in average product prices across customer segments. Loyal customers demonstrated a mean purchase price of $10.39, whilst new customers averaged $13.29 per product. This $2.90 differential suggests that established customers prioritise value and everyday essentials, whereas new customers may experiment with premium offerings.</p>
 
-    <div class="visual-grid">
-        <div class="visual">
-            <img src="../assets/instacart/price_by_hour_line.png" alt="Price Trends by Hour of Day">
-            <p class="caption">Figure 5: Average prices show variability in early morning hours</p>
-        </div>
-        <div class="visual">
-            <img src="../assets/instacart/age_income_scatter.png" alt="Relationship Between Age and Income">
-            <p class="caption">Figure 6: Weak correlation between customer age and income levels</p>
-        </div>
-    </div>
+            <div class="visual-grid">
+                <figure class="visual">
+                    <img src="../assets/instacart/price_by_hour_line.png" alt="Price Trends by Hour of Day">
+                    <figcaption>Figure 5: Average prices show variability in early morning hours</figcaption>
+                </figure>
+                <figure class="visual">
+                    <img src="../assets/instacart/age_income_scatter.png" alt="Relationship Between Age and Income">
+                    <figcaption>Figure 6: Weak correlation between customer age and income levels</figcaption>
+                </figure>
+            </div>
 
-    <h3>Order Frequency Patterns</h3>
-    
-    <table>
-        <tr>
-            <th>Category</th>
-            <th>Order Interval</th>
-            <th>Records</th>
-        </tr>
-        <tr>
-            <td>Frequent Customers</td>
-            <td>10 days or fewer between orders</td>
-            <td>21,559,853</td>
-        </tr>
-        <tr>
-            <td>Regular Customers</td>
-            <td>11 to 20 days between orders</td>
-            <td>7,208,564</td>
-        </tr>
-        <tr>
-            <td>Non Frequent Customers</td>
-            <td>Over 20 days between orders</td>
-            <td>3,636,437</td>
-        </tr>
-    </table>
+            <h3>Order Frequency Patterns</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Order Interval</th>
+                        <th>Records</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Frequent Customers</td>
+                        <td>10 days or fewer between orders</td>
+                        <td>21,559,853</td>
+                    </tr>
+                    <tr>
+                        <td>Regular Customers</td>
+                        <td>11 to 20 days between orders</td>
+                        <td>7,208,564</td>
+                    </tr>
+                    <tr>
+                        <td>Non Frequent Customers</td>
+                        <td>Over 20 days between orders</td>
+                        <td>3,636,437</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <h2>Strategic Recommendations</h2>
-    
-    <ul>
-        <li><strong>Targeted Promotions:</strong> Launch marketing campaigns during peak hours (10:00 to 15:00) when customer engagement is highest to maximise conversion rates</li>
-        <li><strong>Family Focused Marketing:</strong> Direct family oriented product promotions toward Seniors with Dependents and Established Families segments, which collectively dominate the customer base</li>
-        <li><strong>Loyalty Programme Enhancement:</strong> Develop value bundles and rewards for loyal customers who demonstrate consistent, value focused purchasing behaviour</li>
-        <li><strong>New Customer Strategy:</strong> Utilise premium product recommendations to attract new customers, capitalising on their higher average purchase price</li>
-        <li><strong>Operational Efficiency:</strong> Schedule restocking and maintenance activities during low traffic evening and early morning hours</li>
-        <li><strong>Regional Consistency:</strong> Apply national marketing strategies with confidence, as customer profile distributions remain consistent across all regions</li>
-    </ul>
+        <section>
+            <h2>Strategic Recommendations</h2>
+            <ul>
+                <li><strong>Targeted Promotions:</strong> Launch marketing campaigns during peak hours (10:00 to 15:00) when customer engagement is highest to maximise conversion rates</li>
+                <li><strong>Family Focused Marketing:</strong> Direct family oriented product promotions toward Seniors with Dependents and Established Families segments, which collectively dominate the customer base</li>
+                <li><strong>Loyalty Programme Enhancement:</strong> Develop value bundles and rewards for loyal customers who demonstrate consistent, value focused purchasing behaviour</li>
+                <li><strong>New Customer Strategy:</strong> Utilise premium product recommendations to attract new customers, capitalising on their higher average purchase price</li>
+                <li><strong>Operational Efficiency:</strong> Schedule restocking and maintenance activities during low traffic evening and early morning hours</li>
+                <li><strong>Regional Consistency:</strong> Apply national marketing strategies with confidence, as customer profile distributions remain consistent across all regions</li>
+            </ul>
+        </section>
 
-    <h2>Technical Implementation</h2>
-    
-    <p>This project comprised 11 Jupyter notebooks following a structured analytical workflow. Key technical approaches included:</p>
-    
-    <ul>
-        <li>Utilised pandas merge operations with indicator flags to verify data integrity across multiple joins</li>
-        <li>Applied groupby with transform() to calculate user level metrics whilst preserving transaction level granularity</li>
-        <li>Implemented loc() based conditional logic for creating categorical variables and customer flags</li>
-        <li>Created 70/30 train test splits using NumPy random sampling for visualisation validation</li>
-        <li>Developed custom functions for regional assignment and customer profile classification</li>
-        <li>Exported intermediate results as pickle files to maintain data types and optimise processing efficiency</li>
-    </ul>
+        <section>
+            <h2>Technical Implementation</h2>
+            <p>This project comprised 11 Jupyter notebooks following a structured analytical workflow. Key technical approaches included:</p>
+            <ul>
+                <li>Utilised pandas merge operations with indicator flags to verify data integrity across multiple joins</li>
+                <li>Applied groupby with transform() to calculate user level metrics whilst preserving transaction level granularity</li>
+                <li>Implemented loc() based conditional logic for creating categorical variables and customer flags</li>
+                <li>Created 70/30 train test splits using NumPy random sampling for visualisation validation</li>
+                <li>Developed custom functions for regional assignment and customer profile classification</li>
+                <li>Exported intermediate results as pickle files to maintain data types and optimise processing efficiency</li>
+            </ul>
 
-    <div class="btn-group">
-        <a href="https://github.com/DataPenguin-25/Instacart-Basket-Analysis" class="primary" target="_blank">View on GitHub</a>
-        <a href="../index.html" class="secondary">Back to Projects</a>
-    </div>
-
-    <hr>
+            <div class="btn-group">
+                <a href="https://github.com/DataPenguin-25/Instacart-Basket-Analysis" class="btn btn-primary" target="_blank">View on GitHub</a>
+                <a href="../index.html" class="btn btn-secondary">Back to Projects</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Joseph Adamski. Crafted with precision and purpose.</p>
-        <p>Hosted on GitHub Pages</p>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
