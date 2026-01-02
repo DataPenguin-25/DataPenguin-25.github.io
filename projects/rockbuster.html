@@ -35,57 +35,92 @@
             <div class="case-study-meta">
                 <span><strong>Role:</strong> Data Analyst</span>
                 <span><strong>Tools:</strong> PostgreSQL, Tableau, Excel</span>
+                <span><strong>Database:</strong> 15 Tables, 599 Customers, 1,000 Films</span>
             </div>
             <div class="case-study-links">
-                <a href="https://public.tableau.com/views/RockbusterStealth" target="_blank">View Tableau Dashboard →</a>
-                <a href="https://github.com/DataPenguin-25" target="_blank">View GitHub Repository →</a>
+                <a href="https://public.tableau.com/app/profile/joseph.adamski/viz/3_10_tableau/Dashboard1" target="_blank">View Tableau Dashboard →</a>
+                <a href="https://github.com/DataPenguin-25/Rockbuster_Sql" target="_blank">View GitHub Repository →</a>
             </div>
         </header>
 
         <div class="case-study-content">
             <h2>Project Overview</h2>
-            <p>Rockbuster Stealth, a video rental company with a global presence, sought to transition from physical stores to an online streaming model. The management team required data-driven insights to understand customer distribution, revenue performance, and market opportunities across their international operations.</p>
+            <p>Rockbuster Stealth, a video rental company with a global customer base, sought to transition from physical stores to an online streaming model. The management team required data-driven insights to understand their customer distribution, revenue performance, and market opportunities across international operations. This project analysed their relational database using SQL to answer key business questions and inform the streaming launch strategy.</p>
 
             <h2>The Challenge</h2>
-            <p>The business intelligence team posed several key questions:</p>
+            <p>Rockbuster's management posed five critical business questions:</p>
             <ol>
-                <li>Which countries generate the highest revenue?</li>
-                <li>What genres perform best across different markets?</li>
-                <li>Where are high-value customers concentrated?</li>
-                <li>How should the company prioritise its streaming launch strategy?</li>
+                <li>Which movies contributed the most and least to revenue?</li>
+                <li>What was the average rental duration?</li>
+                <li>Which countries are Rockbuster customers based in?</li>
+                <li>Where are customers with high lifetime value located?</li>
+                <li>Do sales figures vary between geographic regions?</li>
             </ol>
 
             <h2>Data and Methodology</h2>
-            <h3>Database Exploration</h3>
-            <p>I connected to Rockbuster's PostgreSQL database and explored fifteen related tables containing customer, rental, payment, inventory, and geographic data. I created an entity-relationship diagram and comprehensive data dictionary to document the database structure.</p>
+            <h3>Database Structure</h3>
+            <p>I connected to Rockbuster's PostgreSQL database, which utilised a snowflake schema comprising 15 related tables. The central fact table (payment) connected to dimension tables including customer, film, staff, store, and inventory, with geographic data normalised across address, city, and country tables. I created a comprehensive data dictionary and entity-relationship diagram to document the database architecture.</p>
 
-            <h3>Analytical Approach</h3>
+            <h3>SQL Techniques Employed</h3>
+            <p>The analysis required sophisticated SQL queries to traverse the normalised schema:</p>
             <ul>
-                <li><strong>Revenue Analysis:</strong> Used SQL joins and aggregations to calculate total revenue by country and genre</li>
-                <li><strong>Customer Analysis:</strong> Identified high-value customers and examined their geographic distribution</li>
-                <li><strong>Market Segmentation:</strong> Ranked countries and cities by customer count and revenue contribution</li>
+                <li><strong>Multi-table JOINs:</strong> Connected four to five tables per query (customer → address → city → country → payment) to link customer data with geographic and transactional information</li>
+                <li><strong>Common Table Expressions (CTEs):</strong> Organised complex logic into modular, readable components for identifying top countries and filtering high-value customers</li>
+                <li><strong>Subqueries:</strong> Nested queries for comparative analysis and conditional aggregations</li>
+                <li><strong>Aggregation Functions:</strong> Utilised SUM, COUNT, AVG, MIN, MAX, and MODE() to derive summary statistics</li>
+                <li><strong>Performance Analysis:</strong> Compared CTE versus subquery execution using EXPLAIN ANALYZE</li>
             </ul>
 
             <h2>Key Findings</h2>
-            <h3>Top Revenue Markets</h3>
-            <p>The United States, India, and China generated the highest total revenue, representing the company's most valuable markets for the streaming transition.</p>
+            
+            <h3>Global Customer Distribution</h3>
+            <p>Analysis revealed that Rockbuster's 599 customers (584 active, 15 inactive) span multiple continents, with significant concentration in Asia. The top five countries by customer count were:</p>
+            <ul>
+                <li><strong>India:</strong> 60 customers generating $6,034.78 in revenue</li>
+                <li><strong>China:</strong> 53 customers generating $5,251.03 in revenue</li>
+                <li><strong>United States:</strong> 36 customers generating $3,685.31 in revenue</li>
+                <li><strong>Japan:</strong> 31 customers generating $3,122.51 in revenue</li>
+                <li><strong>Mexico:</strong> 30 customers generating $2,984.82 in revenue</li>
+            </ul>
 
-            <h3>Genre Performance</h3>
-            <p>Sports, Science Fiction, and Animation produced the most consistent earnings across all regions, suggesting these genres should anchor the streaming catalogue.</p>
+            <h3>High-Value Customer Analysis</h3>
+            <p>The top five customers by lifetime value contributed $995.96 in total revenue, averaging $199.19 per customer. Notably, these high-value customers were geographically dispersed across Réunion, the United States, Brazil, the Netherlands, and Belarus, rather than concentrated in the highest-volume markets.</p>
 
-            <h3>Customer Distribution</h3>
-            <p>High-value customers concentrated in the United States, Brazil, and the Netherlands. India and China led in total customer count, indicating strong growth potential.</p>
+            <h3>Film Catalogue Insights</h3>
+            <p>The 1,000-film catalogue showed consistent pricing and duration patterns:</p>
+            <ul>
+                <li>Average rental rate: $2.98 (range: $0.99 to $4.99)</li>
+                <li>Average replacement cost: $19.98</li>
+                <li>Average film length: 115 minutes</li>
+                <li>Most common rating: PG-13</li>
+            </ul>
+
+            <h3>Performance Optimisation</h3>
+            <p>When comparing query approaches, CTEs demonstrated improved performance over nested subqueries. The CTE version executed in 21.2ms compared to 32.0ms for the equivalent subquery, a 34% improvement. While PostgreSQL optimises both approaches similarly, CTEs offered superior readability and maintainability.</p>
+
+            <h2>Visualisation</h2>
+            <p>I developed an interactive Tableau dashboard displaying global customer distribution and revenue by country. The geographic visualisation enables stakeholders to quickly identify market concentrations and regional performance patterns.</p>
 
             <h2>Recommendations</h2>
+            <p>Based on my analysis, I provided the following recommendations to Rockbuster management:</p>
             <ol>
-                <li><strong>Maintain strong presence</strong> in the United States, India, and China to sustain revenue</li>
-                <li><strong>Expand streaming marketing efforts</strong> in emerging regions such as Brazil and Turkey</li>
-                <li><strong>Offer loyalty programmes</strong> targeting high-value customers to ensure retention</li>
-                <li><strong>Prioritise investments</strong> in top-performing genres (Sports, Science Fiction, Animation)</li>
+                <li><strong>Prioritise streaming launch in India, China, and the United States</strong> where customer concentration and revenue potential are highest</li>
+                <li><strong>Develop loyalty programmes targeting high-value customers</strong> regardless of geographic location, as top spenders are dispersed globally</li>
+                <li><strong>Continue curating PG-13 content</strong> to align with demonstrated viewer preferences</li>
+                <li><strong>Explore growth opportunities in emerging markets</strong> such as Brazil, the Russian Federation, and the Philippines where customer bases already exist</li>
             </ol>
 
+            <h2>Technical Deliverables</h2>
+            <ul>
+                <li>Entity-Relationship Diagram documenting all 15 tables and their relationships</li>
+                <li>Comprehensive Data Dictionary detailing columns, data types, and foreign key constraints</li>
+                <li>SQL query library answering each management question</li>
+                <li>Interactive Tableau dashboard for geographic analysis</li>
+                <li>Executive presentation summarising findings and recommendations</li>
+            </ul>
+
             <h2>Reflections</h2>
-            <p>This project strengthened my SQL proficiency, particularly in writing complex joins across multiple tables. The experience of exploring a relational database and documenting its structure prepared me well for enterprise data environments. Additionally, translating database findings into strategic recommendations reinforced my ability to bridge technical analysis with business communication.</p>
+            <p>This project strengthened my proficiency in writing complex SQL queries across normalised database schemas. The exercise of comparing CTE and subquery performance deepened my understanding of query optimisation. Additionally, translating database findings into strategic business recommendations reinforced my ability to bridge technical analysis with stakeholder communication, a skill I have cultivated throughout my career in client-facing roles.</p>
         </div>
 
         <nav class="case-study-nav">
