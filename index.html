@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Adamski | Data Analyst</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Joseph Adamski</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="assets/Joseph_Adamski_Resume.pdf" class="nav-link nav-resume" target="_blank">Resume</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Joseph Adamski</h1>
+            <p class="hero-title">Data Analyst</p>
+            <p class="hero-description">Transforming complex data into clear, actionable insights. With 15+ years of client-facing experience, I bridge the gap between technical analysis and business decisions.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Portfolio Projects</h2>
+            <p class="section-subtitle">A selection of data analytics projects demonstrating proficiency in Python, SQL, Tableau, and Excel</p>
+            
+            <div class="project-grid">
+                <!-- Project 1: US Housing -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);">
+                            <span class="project-icon">🏠</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Tableau</span>
+                        </div>
+                        <h3>US County-Level Housing Analysis</h3>
+                        <p>Analysed ACS 2022 and BLS data across 3,200+ US counties to identify rental price drivers and segment housing markets using K-means clustering.</p>
+                        <a href="projects/us-housing.html" class="project-link">View Case Study →</a>
+                    </div>
+                </article>
+
+                <!-- Project 2: Instacart -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #2d5a3d 0%, #4a8c5e 100%);">
+                            <span class="project-icon">🛒</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                        <h3>Instacart Customer Behaviour</h3>
+                        <p>Conducted exploratory analysis on 3+ million grocery transactions to identify customer segments and optimise marketing strategies.</p>
+                        <a href="projects/instacart.html" class="project-link">View Case Study →</a>
+                    </div>
+                </article>
+
+                <!-- Project 3: Rockbuster -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #5a2d2d 0%, #8c4a4a 100%);">
+                            <span class="project-icon">🎬</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Tableau</span>
+                        </div>
+                        <h3>Rockbuster Stealth Analysis</h3>
+                        <p>Queried a 15-table relational database to provide revenue insights and market segmentation for a video rental company's streaming transition.</p>
+                        <a href="projects/rockbuster.html" class="project-link">View Case Study →</a>
+                    </div>
+                </article>
+
+                <!-- Project 4: Influenza -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #3d2d5a 0%, #5e4a8c 100%);">
+                            <span class="project-icon">🏥</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Tableau</span>
+                            <span class="tag">Excel</span>
+                        </div>
+                        <h3>Influenza Staffing Strategy</h3>
+                        <p>Developed a data-driven staffing strategy for a US medical agency by analysing CDC mortality data and identifying seasonal demand patterns.</p>
+                        <a href="projects/influenza.html" class="project-link">View Case Study →</a>
+                    </div>
+                </article>
+
+                <!-- Project 5: GameCo -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #5a4a2d 0%, #8c7a4a 100%);">
+                            <span class="project-icon">🎮</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Excel</span>
+                        </div>
+                        <h3>GameCo Regional Sales</h3>
+                        <p>Examined 36 years of video game sales data to challenge assumptions and guide regional marketing budget allocation.</p>
+                        <a href="projects/gameco.html" class="project-link">View Case Study →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Proficiencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages & Tools</h3>
+                    <ul>
+                        <li>Python (Pandas, NumPy, Matplotlib)</li>
+                        <li>SQL / PostgreSQL</li>
+                        <li>Tableau</li>
+                        <li>Excel (Pivot Tables, Power Query)</li>
+                        <li>Power BI</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Methods</h3>
+                    <ul>
+                        <li>Data Cleaning & Transformation</li>
+                        <li>Statistical Analysis</li>
+                        <li>Data Visualisation</li>
+                        <li>KPI Development</li>
+                        <li>Business Process Mapping</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>CompTIA Tech+ (Certified)</li>
+                        <li>CareerFoundry Data Analytics (In Progress)</li>
+                        <li>Nucamp HTML Bootcamp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Joseph Adamski</p>
+                    <p class="footer-location">Stevens Point, Wisconsin (March 2026)</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/joseph-adamski-3a903a287" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/DataPenguin-25" target="_blank">GitHub</a>
+                    <a href="https://public.tableau.com/app/profile/joseph.adamski" target="_blank">Tableau Public</a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Joseph Adamski. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

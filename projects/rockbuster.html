@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockbuster Stealth Analysis | Joseph Adamski</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Joseph Adamski</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Projects</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li><a href="../assets/Joseph_Adamski_Resume.pdf" class="nav-link nav-resume" target="_blank">Resume</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Case Study -->
+    <article class="case-study">
+        <header class="case-study-header">
+            <h1>Rockbuster Stealth Video Rental Analysis</h1>
+            <div class="case-study-meta">
+                <span><strong>Role:</strong> Data Analyst</span>
+                <span><strong>Tools:</strong> PostgreSQL, Tableau, Excel</span>
+            </div>
+            <div class="case-study-links">
+                <a href="https://public.tableau.com/views/RockbusterStealth" target="_blank">View Tableau Dashboard →</a>
+                <a href="https://github.com/DataPenguin-25" target="_blank">View GitHub Repository →</a>
+            </div>
+        </header>
+
+        <div class="case-study-content">
+            <h2>Project Overview</h2>
+            <p>Rockbuster Stealth, a video rental company with a global presence, sought to transition from physical stores to an online streaming model. The management team required data-driven insights to understand customer distribution, revenue performance, and market opportunities across their international operations.</p>
+
+            <h2>The Challenge</h2>
+            <p>The business intelligence team posed several key questions:</p>
+            <ol>
+                <li>Which countries generate the highest revenue?</li>
+                <li>What genres perform best across different markets?</li>
+                <li>Where are high-value customers concentrated?</li>
+                <li>How should the company prioritise its streaming launch strategy?</li>
+            </ol>
+
+            <h2>Data and Methodology</h2>
+            <h3>Database Exploration</h3>
+            <p>I connected to Rockbuster's PostgreSQL database and explored fifteen related tables containing customer, rental, payment, inventory, and geographic data. I created an entity-relationship diagram and comprehensive data dictionary to document the database structure.</p>
+
+            <h3>Analytical Approach</h3>
+            <ul>
+                <li><strong>Revenue Analysis:</strong> Used SQL joins and aggregations to calculate total revenue by country and genre</li>
+                <li><strong>Customer Analysis:</strong> Identified high-value customers and examined their geographic distribution</li>
+                <li><strong>Market Segmentation:</strong> Ranked countries and cities by customer count and revenue contribution</li>
+            </ul>
+
+            <h2>Key Findings</h2>
+            <h3>Top Revenue Markets</h3>
+            <p>The United States, India, and China generated the highest total revenue, representing the company's most valuable markets for the streaming transition.</p>
+
+            <h3>Genre Performance</h3>
+            <p>Sports, Science Fiction, and Animation produced the most consistent earnings across all regions, suggesting these genres should anchor the streaming catalogue.</p>
+
+            <h3>Customer Distribution</h3>
+            <p>High-value customers concentrated in the United States, Brazil, and the Netherlands. India and China led in total customer count, indicating strong growth potential.</p>
+
+            <h2>Recommendations</h2>
+            <ol>
+                <li><strong>Maintain strong presence</strong> in the United States, India, and China to sustain revenue</li>
+                <li><strong>Expand streaming marketing efforts</strong> in emerging regions such as Brazil and Turkey</li>
+                <li><strong>Offer loyalty programmes</strong> targeting high-value customers to ensure retention</li>
+                <li><strong>Prioritise investments</strong> in top-performing genres (Sports, Science Fiction, Animation)</li>
+            </ol>
+
+            <h2>Reflections</h2>
+            <p>This project strengthened my SQL proficiency, particularly in writing complex joins across multiple tables. The experience of exploring a relational database and documenting its structure prepared me well for enterprise data environments. Additionally, translating database findings into strategic recommendations reinforced my ability to bridge technical analysis with business communication.</p>
+        </div>
+
+        <nav class="case-study-nav">
+            <a href="../index.html" class="btn btn-secondary">← Back to Projects</a>
+        </nav>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Joseph Adamski</p>
+                    <p class="footer-location">Stevens Point, Wisconsin (March 2026)</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/joseph-adamski-3a903a287" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/DataPenguin-25" target="_blank">GitHub</a>
+                    <a href="https://public.tableau.com/app/profile/joseph.adamski" target="_blank">Tableau Public</a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Joseph Adamski. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influenza Staffing Strategy | Joseph Adamski</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Joseph Adamski</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Projects</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li><a href="../assets/Joseph_Adamski_Resume.pdf" class="nav-link nav-resume" target="_blank">Resume</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Case Study -->
+    <article class="case-study">
+        <header class="case-study-header">
+            <h1>Influenza Staffing Strategy</h1>
+            <div class="case-study-meta">
+                <span><strong>Role:</strong> Data Analyst</span>
+                <span><strong>Tools:</strong> Tableau, Excel</span>
+                <span><strong>Data:</strong> CDC Mortality Data (2009-2017)</span>
+            </div>
+            <div class="case-study-links">
+                <a href="https://public.tableau.com/views/InfluenzaStaffing" target="_blank">View Tableau Dashboard →</a>
+            </div>
+        </header>
+
+        <div class="case-study-content">
+            <h2>Project Overview</h2>
+            <p>A US medical staffing agency needed to determine where and when to deploy temporary healthcare workers during influenza season to prevent staff shortages at hospitals and clinics. This project analysed CDC mortality data to identify regional and seasonal trends that drive demand for medical personnel.</p>
+
+            <h2>The Challenge</h2>
+            <p>The agency required answers to critical resource planning questions:</p>
+            <ol>
+                <li>Which states experience the highest influenza mortality?</li>
+                <li>When does flu season peak, and how consistent is this timing year to year?</li>
+                <li>What demographic factors correlate with influenza deaths?</li>
+                <li>How should staffing resources be allocated geographically and temporally?</li>
+            </ol>
+
+            <h2>Data and Methodology</h2>
+            <h3>Data Preparation</h3>
+            <p>I obtained CDC influenza mortality data spanning 2009 to 2017 and merged it with US Census population data by state. The analysis focused particularly on adults aged 65 and older, as this population faces the highest risk of severe influenza outcomes.</p>
+
+            <h3>Analytical Approach</h3>
+            <ul>
+                <li><strong>Geographic Analysis:</strong> Created choropleth maps in Tableau to visualise mortality rates by state</li>
+                <li><strong>Temporal Analysis:</strong> Examined monthly mortality patterns across multiple years</li>
+                <li><strong>Correlation Analysis:</strong> Tested the relationship between elderly population size and influenza deaths</li>
+            </ul>
+
+            <h2>Key Findings</h2>
+            <h3>Strong Correlation with Elderly Population</h3>
+            <p>A strong correlation (r ≈ 0.9) emerged between elderly population and flu deaths, confirming that states with larger populations aged 65 and older require greater staffing resources.</p>
+
+            <h3>Consistent Winter Peak</h3>
+            <p>Influenza mortality consistently peaked between December and March each year, with January and February typically showing the highest case volumes.</p>
+
+            <h3>High-Risk States</h3>
+            <p>California, Texas, New York, Florida, and Pennsylvania recorded the highest total flu deaths, reflecting their large populations and significant elderly communities.</p>
+
+            <h2>Recommendations</h2>
+            <ol>
+                <li><strong>Prioritise staffing</strong> in high-risk states (California, Texas, New York, Florida, Pennsylvania)</li>
+                <li><strong>Deploy additional personnel</strong> during November through March</li>
+                <li><strong>Focus specialised resources</strong> in regions with large elderly populations</li>
+                <li><strong>Monitor CDC data weekly</strong> to adjust staffing dynamically as the season progresses</li>
+            </ol>
+
+            <h2>Reflections</h2>
+            <p>This project demonstrated the practical value of data visualisation for resource planning. The Tableau dashboards enabled stakeholders to quickly grasp geographic and temporal patterns that would be difficult to communicate through tables alone. My experience explaining technical concepts to non-technical audiences proved valuable in framing recommendations for agency leadership.</p>
+        </div>
+
+        <nav class="case-study-nav">
+            <a href="../index.html" class="btn btn-secondary">← Back to Projects</a>
+        </nav>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Joseph Adamski</p>
+                    <p class="footer-location">Stevens Point, Wisconsin (March 2026)</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/joseph-adamski-3a903a287" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/DataPenguin-25" target="_blank">GitHub</a>
+                    <a href="https://public.tableau.com/app/profile/joseph.adamski" target="_blank">Tableau Public</a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Joseph Adamski. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

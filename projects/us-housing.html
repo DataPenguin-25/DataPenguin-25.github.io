@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Housing Analysis | Joseph Adamski</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Joseph Adamski</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Projects</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li><a href="../assets/Joseph_Adamski_Resume.pdf" class="nav-link nav-resume" target="_blank">Resume</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Case Study -->
+    <article class="case-study">
+        <header class="case-study-header">
+            <h1>US County-Level Housing and Employment Analysis</h1>
+            <div class="case-study-meta">
+                <span><strong>Role:</strong> Data Analyst</span>
+                <span><strong>Tools:</strong> Python, Tableau</span>
+                <span><strong>Duration:</strong> 4 Weeks</span>
+            </div>
+            <div class="case-study-links">
+                <a href="https://public.tableau.com/views/USHousingAnalysis" target="_blank">View Tableau Dashboard →</a>
+                <a href="https://github.com/DataPenguin-25" target="_blank">View GitHub Repository →</a>
+            </div>
+        </header>
+
+        <div class="case-study-content">
+            <h2>Project Overview</h2>
+            <p>Housing affordability remains one of the most pressing economic concerns facing American families, policymakers, and investors alike. This project examined county-level housing data across the United States to identify the primary factors driving rental prices and to segment housing markets into actionable categories for policy analysis and investment decision-making.</p>
+
+            <h2>The Challenge</h2>
+            <p>Stakeholders required a clear understanding of which economic and demographic factors most strongly influence rental costs at the county level. Additionally, they sought a practical framework for categorising US counties into distinct market types to guide resource allocation and strategic planning.</p>
+            
+            <h3>Key Questions</h3>
+            <ol>
+                <li>Which factors most strongly predict county-level rental prices?</li>
+                <li>How do housing markets vary geographically across the United States?</li>
+                <li>Can counties be meaningfully segmented into distinct market types?</li>
+            </ol>
+
+            <h2>Data and Methodology</h2>
+            <h3>Data Sources</h3>
+            <p>I obtained housing metrics from the American Community Survey (ACS) 2022, covering more than 3,200 US counties. This dataset included median gross rent, median household income, median home values, and vacancy rates. I supplemented this with unemployment data from the Bureau of Labor Statistics to incorporate labour market conditions.</p>
+
+            <h3>Data Preparation</h3>
+            <p>I cleaned and merged the datasets by FIPS code, addressing missing values and ensuring consistency across variables. The final analytical dataset contained complete records for 3,143 counties.</p>
+
+            <h3>Analytical Approach</h3>
+            <p>My analysis proceeded in three phases:</p>
+            <ul>
+                <li><strong>Phase 1: Correlation Analysis</strong> – Examined relationships between rental prices and potential predictor variables</li>
+                <li><strong>Phase 2: Regression Modelling</strong> – Quantified the predictive power of income and home values on rental prices</li>
+                <li><strong>Phase 3: Market Segmentation</strong> – Applied K-means clustering to segment counties into distinct market types</li>
+            </ul>
+
+            <h2>Key Findings</h2>
+            <h3>Income Strongly Predicts Rent</h3>
+            <p>Median household income emerged as a powerful predictor of county-level rental prices, with an R-squared value of 0.60 (p < 0.0001). This indicates that income alone explains approximately 60% of the variation in rental costs across US counties.</p>
+
+            <h3>Home Values Correlate with Rent</h3>
+            <p>Median home values demonstrated an even stronger relationship with rental prices (R-squared = 0.72), suggesting that ownership and rental markets move in tandem at the county level.</p>
+
+            <h3>Three Distinct Market Clusters</h3>
+            <p>K-means clustering revealed three distinct market segments:</p>
+            <ul>
+                <li><strong>Affluent/Tight Markets:</strong> High income, high rent, concentrated in coastal California, the Northeast corridor, and select metropolitan areas</li>
+                <li><strong>Middle-Tier Markets:</strong> Moderate values across all metrics, representing the majority of suburban and mid-sized urban counties</li>
+                <li><strong>Distressed Markets:</strong> Low income, low rent, concentrated in rural areas of the South and Midwest</li>
+            </ul>
+
+            <h2>Recommendations</h2>
+            <ol>
+                <li><strong>Target affordable housing programmes</strong> toward Distressed counties, where low incomes combine with limited housing quality</li>
+                <li><strong>Monitor Affluent/Tight markets</strong> (coastal California, Northeast) for affordability policy interventions</li>
+                <li><strong>Use income as the primary indicator</strong> when forecasting county-level rental trends</li>
+                <li><strong>Apply geographic clustering</strong> to guide regional housing investment decisions</li>
+            </ol>
+
+            <h2>Reflections</h2>
+            <p>This project reinforced the value of combining statistical analysis with clear visualisation. The K-means clustering approach proved particularly effective for translating complex multivariate data into actionable market categories. I also gained experience communicating analytical findings in a manner accessible to non-technical stakeholders, a skill I have cultivated throughout my career in client-facing roles.</p>
+        </div>
+
+        <nav class="case-study-nav">
+            <a href="../index.html" class="btn btn-secondary">← Back to Projects</a>
+        </nav>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Joseph Adamski</p>
+                    <p class="footer-location">Stevens Point, Wisconsin (March 2026)</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/joseph-adamski-3a903a287" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/DataPenguin-25" target="_blank">GitHub</a>
+                    <a href="https://public.tableau.com/app/profile/joseph.adamski" target="_blank">Tableau Public</a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Joseph Adamski. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instacart Analysis | Joseph Adamski</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Joseph Adamski</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Projects</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li><a href="../assets/Joseph_Adamski_Resume.pdf" class="nav-link nav-resume" target="_blank">Resume</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Case Study -->
+    <article class="case-study">
+        <header class="case-study-header">
+            <h1>Instacart Customer Behaviour Analysis</h1>
+            <div class="case-study-meta">
+                <span><strong>Role:</strong> Data Analyst</span>
+                <span><strong>Tools:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn)</span>
+            </div>
+            <div class="case-study-links">
+                <a href="https://github.com/DataPenguin-25" target="_blank">View GitHub Repository →</a>
+            </div>
+        </header>
+
+        <div class="case-study-content">
+            <h2>Project Overview</h2>
+            <p>Instacart, a leading online grocery retailer, sought to better understand customer ordering patterns and product demand to improve marketing targeting and product recommendations. This project analysed more than three million rows of transactional data to uncover customer behaviour, shopping frequency patterns, and high-demand product categories.</p>
+
+            <h2>The Challenge</h2>
+            <p>The marketing team required insights to answer several key questions:</p>
+            <ol>
+                <li>When do customers place orders throughout the day and week?</li>
+                <li>What customer segments exist within the user base?</li>
+                <li>How can marketing efforts be tailored to different customer profiles?</li>
+            </ol>
+
+            <h2>Data and Methodology</h2>
+            <h3>Data Preparation</h3>
+            <p>I cleaned and prepared the Instacart dataset using Pandas, addressing missing values and ensuring data integrity across order, product, and customer tables. The final dataset contained more than three million order records.</p>
+
+            <h3>Analytical Approach</h3>
+            <ul>
+                <li><strong>Temporal Analysis:</strong> Examined ordering behaviour across the 24-hour day and throughout the week</li>
+                <li><strong>Customer Segmentation:</strong> Created customer profiles based on age, income, region, and household composition</li>
+                <li><strong>Visualisation:</strong> Developed charts using Matplotlib and Seaborn to communicate patterns clearly</li>
+            </ul>
+
+            <h2>Key Findings</h2>
+            <h3>Peak Ordering Hours</h3>
+            <p>Orders peak between late morning and early afternoon, with the highest activity occurring between 10:00 and 15:00. Activity drops significantly during evening and early morning hours.</p>
+
+            <h3>Customer Segments</h3>
+            <p>Segmentation analysis revealed that Established Families and Seniors with Dependents represent the largest shopper groups, suggesting that family-oriented product marketing would reach the broadest audience.</p>
+
+            <h3>Purchasing Patterns</h3>
+            <p>Fresh produce and dairy products dominate purchasing behaviour, with reorder rates highest among staple items.</p>
+
+            <h2>Recommendations</h2>
+            <ol>
+                <li><strong>Launch promotions during mid-afternoon</strong> when customer activity is highest</li>
+                <li><strong>Target family-oriented products</strong> toward Established Families and Seniors with Dependents</li>
+                <li><strong>Use low-traffic evening and early-morning hours</strong> for operational tasks</li>
+                <li><strong>Tailor marketing messages</strong> to the largest customer profiles for maximum impact</li>
+            </ol>
+
+            <h2>Reflections</h2>
+            <p>This project demonstrated the power of Python for handling large-scale datasets. The customer segmentation exercise reinforced my understanding of how demographic factors influence purchasing behaviour, knowledge that complements my years of direct client engagement in previous roles.</p>
+        </div>
+
+        <nav class="case-study-nav">
+            <a href="../index.html" class="btn btn-secondary">← Back to Projects</a>
+        </nav>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Joseph Adamski</p>
+                    <p class="footer-location">Stevens Point, Wisconsin (March 2026)</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/joseph-adamski-3a903a287" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/DataPenguin-25" target="_blank">GitHub</a>
+                    <a href="https://public.tableau.com/app/profile/joseph.adamski" target="_blank">Tableau Public</a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Joseph Adamski. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
