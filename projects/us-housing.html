@@ -32,71 +32,227 @@
     <article class="case-study">
         <header class="case-study-header">
             <h1>US County-Level Housing and Employment Analysis</h1>
+            <p class="case-study-subtitle">Identifying Profitable Rental Markets for Landlords and Investors</p>
             <div class="case-study-meta">
                 <span><strong>Role:</strong> Data Analyst</span>
-                <span><strong>Tools:</strong> Python, Tableau</span>
-                <span><strong>Duration:</strong> 4 Weeks</span>
+                <span><strong>Tools:</strong> Python (Pandas, NumPy, Scikit-learn, Statsmodels), Tableau, Folium</span>
+                <span><strong>Duration:</strong> Approximately 4 Weeks</span>
             </div>
             <div class="case-study-links">
-                <a href="https://public.tableau.com/views/USHousingAnalysis" target="_blank">View Tableau Dashboard →</a>
-                <a href="https://github.com/DataPenguin-25" target="_blank">View GitHub Repository →</a>
+                <a href="https://public.tableau.com/app/profile/joseph.adamski/viz/6_7_17659610346080/USHousingAnalysis" target="_blank">View Tableau Storyboard →</a>
+                <a href="https://github.com/DataPenguin-25/us-county-housing-analysis" target="_blank">View GitHub Repository →</a>
             </div>
         </header>
 
         <div class="case-study-content">
-            <h2>Project Overview</h2>
-            <p>Housing affordability remains one of the most pressing economic concerns facing American families, policymakers, and investors alike. This project examined county-level housing data across the United States to identify the primary factors driving rental prices and to segment housing markets into actionable categories for policy analysis and investment decision-making.</p>
+            <section>
+                <h2>Project Overview</h2>
+                <p>Landlords and property investors face a fundamental question when evaluating rental markets: where can reliable tenants be found, in markets with healthy demand and reasonable entry costs? Selecting the wrong market can result in high vacancy rates, tenants who struggle to meet rent obligations, or overpaying for properties in saturated markets.</p>
+                
+                <p>This project was undertaken to provide landlords and investors with a data-driven framework for evaluating over 3,200 US counties and identifying which markets present the most attractive opportunities for rental property investment. The analysis integrates housing metrics from the American Community Survey with employment data from the Bureau of Labor Statistics to deliver actionable insights.</p>
+            </section>
 
-            <h2>The Challenge</h2>
-            <p>Stakeholders required a clear understanding of which economic and demographic factors most strongly influence rental costs at the county level. Additionally, they sought a practical framework for categorising US counties into distinct market types to guide resource allocation and strategic planning.</p>
-            
-            <h3>Key Questions</h3>
-            <ol>
-                <li>Which factors most strongly predict county-level rental prices?</li>
-                <li>How do housing markets vary geographically across the United States?</li>
-                <li>Can counties be meaningfully segmented into distinct market types?</li>
-            </ol>
+            <section>
+                <h2>The Challenge</h2>
+                <p>The analysis was designed to answer several critical questions for prospective investors:</p>
+                <ul>
+                    <li>Which counties offer favourable rent-to-income ratios?</li>
+                    <li>How do vacancy rates vary across counties and regions?</li>
+                    <li>What economic indicators most strongly predict rent levels?</li>
+                    <li>Can counties be grouped into meaningful investment categories?</li>
+                    <li>Which counties combine strong income, low unemployment, and reasonable rent?</li>
+                </ul>
+            </section>
 
-            <h2>Data and Methodology</h2>
-            <h3>Data Sources</h3>
-            <p>I obtained housing metrics from the American Community Survey (ACS) 2022, covering more than 3,200 US counties. This dataset included median gross rent, median household income, median home values, and vacancy rates. I supplemented this with unemployment data from the Bureau of Labor Statistics to incorporate labour market conditions.</p>
+            <section>
+                <h2>Data Sources and Preparation</h2>
+                <h3>American Community Survey (ACS) 2022</h3>
+                <p>The ACS dataset provided cross-sectional housing and socioeconomic data for 3,222 US counties, including median gross rent, median household income, median home value, total housing units, vacant housing units, rental vacancy rate, and state/county identifiers (FIPS codes). The 5-year estimates offer stability and coverage across all US counties, including rural areas where single-year estimates would be unreliable.</p>
 
-            <h3>Data Preparation</h3>
-            <p>I cleaned and merged the datasets by FIPS code, addressing missing values and ensuring consistency across variables. The final analytical dataset contained complete records for 3,143 counties.</p>
+                <h3>Bureau of Labor Statistics (BLS) LAUS</h3>
+                <p>The BLS Local Area Unemployment Statistics dataset provided monthly unemployment data at the county level from 1990 to present, including unemployment rate, employment level, labour force size, and monthly time series observations. This time-dependent data enabled analysis of labour market stability and economic trends across counties.</p>
 
-            <h3>Analytical Approach</h3>
-            <p>My analysis proceeded in three phases:</p>
-            <ul>
-                <li><strong>Phase 1: Correlation Analysis</strong> – Examined relationships between rental prices and potential predictor variables</li>
-                <li><strong>Phase 2: Regression Modelling</strong> – Quantified the predictive power of income and home values on rental prices</li>
-                <li><strong>Phase 3: Market Segmentation</strong> – Applied K-means clustering to segment counties into distinct market types</li>
-            </ul>
+                <h3>Data Preparation</h3>
+                <p>The data preparation process addressed several quality issues. ACS data contained corrupted values (indicated by placeholder codes) which were identified and removed. The raw BLS file contained formatting inconsistencies including whitespace, tabs, and non-numeric characters which were stripped and cleaned. FIPS codes were standardised to 5-digit strings with leading zeros preserved to enable accurate merging. A rent-to-income ratio was calculated to assess tenant affordability.</p>
+                
+                <p>After cleaning, the ACS dataset contained 3,211 valid county observations. The merged dataset with BLS unemployment data contained over 1.3 million monthly county-level observations spanning multiple decades.</p>
+            </section>
 
-            <h2>Key Findings</h2>
-            <h3>Income Strongly Predicts Rent</h3>
-            <p>Median household income emerged as a powerful predictor of county-level rental prices, with an R-squared value of 0.60 (p < 0.0001). This indicates that income alone explains approximately 60% of the variation in rental costs across US counties.</p>
+            <section>
+                <h2>Analytical Approach</h2>
+                <p>The analysis proceeded in four distinct phases:</p>
+                <ul>
+                    <li><strong>Phase 1: Exploratory Analysis</strong> — Examined relationships between rental prices and potential predictor variables through correlation analysis and visualisation</li>
+                    <li><strong>Phase 2: Regression Modelling</strong> — Quantified the predictive power of income and home values on rental prices using linear regression</li>
+                    <li><strong>Phase 3: Market Segmentation</strong> — Applied K-means clustering to segment counties into distinct market types</li>
+                    <li><strong>Phase 4: Time Series Analysis</strong> — Examined unemployment trends and labour market stability using decomposition and stationarity testing</li>
+                </ul>
+            </section>
 
-            <h3>Home Values Correlate with Rent</h3>
-            <p>Median home values demonstrated an even stronger relationship with rental prices (R-squared = 0.72), suggesting that ownership and rental markets move in tandem at the county level.</p>
+            <section>
+                <h2>Key Findings and Visualisations</h2>
 
-            <h3>Three Distinct Market Clusters</h3>
-            <p>K-means clustering revealed three distinct market segments:</p>
-            <ul>
-                <li><strong>Affluent/Tight Markets:</strong> High income, high rent, concentrated in coastal California, the Northeast corridor, and select metropolitan areas</li>
-                <li><strong>Middle-Tier Markets:</strong> Moderate values across all metrics, representing the majority of suburban and mid-sized urban counties</li>
-                <li><strong>Distressed Markets:</strong> Low income, low rent, concentrated in rural areas of the South and Midwest</li>
-            </ul>
+                <h3>Correlation Analysis</h3>
+                <p>A correlation matrix revealed the relationships between key housing variables. Rent, income, and home value form a tightly correlated cluster. Counties with higher incomes have higher rents and higher property values.</p>
 
-            <h2>Recommendations</h2>
-            <ol>
-                <li><strong>Target affordable housing programmes</strong> toward Distressed counties, where low incomes combine with limited housing quality</li>
-                <li><strong>Monitor Affluent/Tight markets</strong> (coastal California, Northeast) for affordability policy interventions</li>
-                <li><strong>Use income as the primary indicator</strong> when forecasting county-level rental trends</li>
-                <li><strong>Apply geographic clustering</strong> to guide regional housing investment decisions</li>
-            </ol>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Variable Pair</th>
+                            <th>Correlation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rent and Home Value</td>
+                            <td>0.85</td>
+                        </tr>
+                        <tr>
+                            <td>Rent and Income</td>
+                            <td>0.78</td>
+                        </tr>
+                        <tr>
+                            <td>Income and Home Value</td>
+                            <td>0.73</td>
+                        </tr>
+                        <tr>
+                            <td>Vacancy and Income</td>
+                            <td>-0.36</td>
+                        </tr>
+                        <tr>
+                            <td>Vacancy and Rent</td>
+                            <td>-0.31</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <h2>Reflections</h2>
-            <p>This project reinforced the value of combining statistical analysis with clear visualisation. The K-means clustering approach proved particularly effective for translating complex multivariate data into actionable market categories. I also gained experience communicating analytical findings in a manner accessible to non-technical stakeholders, a skill I have cultivated throughout my career in client-facing roles.</p>
+                <p>Rental vacancy rate shows weak negative correlations with other economic indicators. High-vacancy counties tend to have somewhat lower incomes and rents, but the relationship is not strong enough to rely upon vacancy alone as a market indicator.</p>
+
+                <h3>Income Strongly Predicts Rent</h3>
+                <p>A linear regression model was fitted with median household income as the predictor and median gross rent as the target variable. The results confirmed that income is a powerful predictor of county-level rental prices.</p>
+
+                <figure class="case-study-figure" style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/us-housing/regression_results.png" alt="Linear regression scatter plot showing median household income versus median gross rent with regression line" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: #666; font-style: italic;">Linear regression results: Income explains approximately 63% of the variance in county-level rent (R² = 0.627, p &lt; 0.0001).</figcaption>
+                </figure>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Training/Test Split</td>
+                            <td>70% / 30%</td>
+                        </tr>
+                        <tr>
+                            <td>Slope</td>
+                            <td>0.0121</td>
+                        </tr>
+                        <tr>
+                            <td>Intercept</td>
+                            <td>$137</td>
+                        </tr>
+                        <tr>
+                            <td>R² Score</td>
+                            <td>0.627</td>
+                        </tr>
+                        <tr>
+                            <td>Mean Squared Error</td>
+                            <td>32,704</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>The positive slope confirms the hypothesis: higher-income counties command higher rents. When evaluating a county, median household income serves as a reliable first-pass indicator of expected rent levels.</p>
+
+                <h3>Three Distinct Market Clusters</h3>
+                <p>K-means clustering was applied to segment US counties into distinct market types. All variables were standardised using z-score transformation prior to clustering. The elbow method indicated that three clusters provide meaningful segmentation without overfitting.</p>
+
+                <figure class="case-study-figure" style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/us-housing/cluster_income_rent.png" alt="Scatter plot showing three market clusters based on median household income and median gross rent" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: #666; font-style: italic;">K-means clustering reveals three distinct market segments: Premium (yellow), Middle-Tier (teal), and Distressed (purple) markets.</figcaption>
+                </figure>
+
+                <p><strong>Cluster 0: Premium Markets (241 counties)</strong> — These are affluent metropolitan and suburban counties with high incomes (median $95,144), high rents (median $1,568), high property values, and tight rental markets (vacancy 6.9%). Tenants have strong ability to pay. Entry costs are high, but vacancy risk is low.</p>
+
+                <p><strong>Cluster 1: Middle-Tier Markets (1,445 counties)</strong> — These counties represent the broad middle of the US housing market. Incomes (median $67,028) and rents (median $911) are moderate, property values are accessible, and vacancy rates (10.8%) are reasonable. They often present the most balanced opportunity for investors.</p>
+
+                <p><strong>Cluster 2: Distressed and Rural Markets (1,525 counties)</strong> — These counties exhibit lower incomes (median $51,669), lower rents (median $724), lower property values, and significantly elevated vacancy rates averaging nearly 25%. Low entry costs may appear attractive, but high vacancy presents substantial risk.</p>
+
+                <h3>Geographic Distribution</h3>
+                <p>An interactive choropleth map was created using Folium to visualise the geographic distribution of rental vacancy rates across US counties. Clear regional patterns emerge, with high vacancy concentrated in the rural Midwest and South, whilst tight markets dominate coastal urban areas.</p>
+
+                <figure class="case-study-figure" style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/us-housing/choropleth_map.png" alt="Choropleth map of the United States showing rental vacancy rates by county" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: #666; font-style: italic;">Geographic distribution of rental vacancy rates. Darker shading indicates higher vacancy, concentrated in the rural Midwest and South. Coastal areas exhibit tight markets with low vacancy.</figcaption>
+                </figure>
+
+                <h3>Time Series Analysis</h3>
+                <p>To assess labour market stability, time series analysis was conducted on BLS unemployment data. Monthly unemployment rates were analysed from 1990 to present, revealing clear cyclical patterns corresponding to economic recessions.</p>
+
+                <figure class="case-study-figure" style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/us-housing/unemployment_time_series.png" alt="Line chart showing unemployment rate over time from 1990 to 2024" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: #666; font-style: italic;">Unemployment rate time series showing cyclical patterns. Major spikes visible during the early 1990s recession, 2008 financial crisis, and 2020 pandemic.</figcaption>
+                </figure>
+
+                <p>The Augmented Dickey-Fuller test yielded a p-value of 0.35, indicating non-stationarity. First differencing was applied to achieve stationarity, confirming that the series is suitable for further time series modelling.</p>
+            </section>
+
+            <section>
+                <h2>Summary of Findings</h2>
+                <ul>
+                    <li><strong>Income Predicts Rent:</strong> Median household income explains 63% of variance in county-level rents. Higher-income counties command higher rents, and tenants in these areas have greater capacity to meet rental obligations.</li>
+                    <li><strong>Vacancy Varies Dramatically by Region:</strong> Rental vacancy rates range from under 3% in tight coastal markets to over 60% in some rural counties. The Midwest and rural South exhibit high vacancy, whilst the Northeast and West Coast show tight markets.</li>
+                    <li><strong>Three Distinct Market Types Exist:</strong> US counties naturally segment into Premium (241 counties), Middle-Tier (1,445 counties), and Distressed (1,525 counties) categories based on income, rent, and vacancy characteristics.</li>
+                    <li><strong>Low Rent Does Not Equal Low Risk:</strong> Some low-rent counties have correspondingly low incomes, meaning tenants may struggle to pay even modest rents. The rent-to-income ratio provides a more complete picture than rent level alone.</li>
+                    <li><strong>Economic Stability Matters:</strong> Time series analysis reveals that county labour markets experience significant cyclical variation. Markets with historically volatile unemployment present higher tenant risk during economic downturns.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Recommendations</h2>
+                <p>Based upon these findings, the following recommendations were developed for landlords and property investors:</p>
+                <ul>
+                    <li><strong>Target Middle-Tier Markets for Balanced Returns:</strong> Cluster 1 counties offer the most attractive balance. Entry costs are accessible, tenant incomes are sufficient, and vacancy rates are manageable.</li>
+                    <li><strong>Use Income as a Primary Screening Criterion:</strong> Counties with higher incomes support higher rents and present lower collection risk. Income data is readily available and provides a quick method to filter potential markets.</li>
+                    <li><strong>Avoid High-Vacancy Markets Without Local Expertise:</strong> Distressed markets with vacancy rates exceeding 20% present substantial challenges. Unless an investor possesses local knowledge and tolerance for extended vacancy periods, these markets should be approached with caution.</li>
+                    <li><strong>Monitor Unemployment Trends:</strong> Historical unemployment data provides insight into economic stability. Markets with volatile or persistently elevated unemployment warrant additional scrutiny.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Technical Implementation</h2>
+                <p>The project comprised six Python scripts following a structured analytical workflow:</p>
+                <ul>
+                    <li>Utilised pandas merge operations to integrate ACS and BLS datasets by FIPS code</li>
+                    <li>Applied StandardScaler for z-score normalisation prior to K-means clustering</li>
+                    <li>Implemented train/test splits (70/30) for regression validation</li>
+                    <li>Created interactive choropleth maps using Folium with GeoJSON county boundaries</li>
+                    <li>Conducted seasonal decomposition and Augmented Dickey-Fuller stationarity testing</li>
+                    <li>Developed comprehensive Tableau storyboard for stakeholder presentation</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Reflections</h2>
+                <p>This project reinforced the value of combining statistical analysis with clear visualisation. The K-means clustering approach proved particularly effective for translating complex multivariate data into actionable market categories that investors can readily understand and apply.</p>
+                
+                <p>The challenge of communicating technical findings to non-technical stakeholders drew upon my years of experience in client-facing roles, where I have consistently been recognised for explaining complex information with clarity and patience. Just as I once translated automotive diagnostics into plain language for customers at Rehbein Ford, this project required translating correlation coefficients and cluster centroids into practical investment guidance.</p>
+                
+                <p>The integration of cross-sectional housing data with longitudinal unemployment data presented technical challenges, but the resulting framework provides a more comprehensive view of market conditions than either dataset could offer alone. Future enhancements could include multi-variable regression incorporating vacancy rate and population density, as well as predictive modelling for rent levels.</p>
+            </section>
+
+            <section>
+                <h2>Project Links</h2>
+                <div class="btn-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="https://public.tableau.com/app/profile/joseph.adamski/viz/6_7_17659610346080/USHousingAnalysis" class="btn btn-primary" target="_blank">View Tableau Storyboard</a>
+                    <a href="https://github.com/DataPenguin-25/us-county-housing-analysis" class="btn btn-secondary" target="_blank">View on GitHub</a>
+                </div>
+            </section>
         </div>
 
         <nav class="case-study-nav">
