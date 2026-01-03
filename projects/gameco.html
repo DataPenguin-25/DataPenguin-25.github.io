@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameCo Regional Sales | Joseph Adamski</title>
+    <title>GameCo Regional Sales Analysis | Joseph Adamski</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -32,63 +29,71 @@
     <article class="case-study">
         <header class="case-study-header">
             <h1>GameCo Regional Sales Analysis</h1>
+            <p class="case-study-subtitle">Exploring Video Game Sales Trends to Improve Regional Budget Planning</p>
             <div class="case-study-meta">
                 <span><strong>Role:</strong> Data Analyst</span>
-                <span><strong>Tools:</strong> Excel (Pivot Tables, Charts)</span>
-                <span><strong>Data:</strong> VGChartz (1980-2016)</span>
+                <span><strong>Tools:</strong> Microsoft Excel (Pivot Tables, Charts, Descriptive Statistics)</span>
+                <span><strong>Data Source:</strong> VGChartz (1980 to 2016)</span>
             </div>
         </header>
 
         <div class="case-study-content">
-            <h2>Project Overview</h2>
-            <p>GameCo, a video game company, needed to evaluate regional video game sales trends to optimise their marketing budget allocation. This project analysed historical sales data spanning nearly four decades to identify market shifts and growth opportunities across North America, Europe, Japan, and other regions.</p>
+            <section>
+                <h2>Project Overview</h2>
+                <p>GameCo, a video game company, required a comprehensive evaluation of regional video game sales trends to optimise their marketing budget allocation. The marketing team had long operated under the assumption that regional sales remained relatively stable over time. This project was undertaken to test that assumption through rigorous data analysis and to identify market shifts and growth opportunities across four key regions: North America, Europe, Japan, and Other markets.</p>
+            </section>
 
-            <h2>The Challenge</h2>
-            <p>GameCo's marketing team operated under the assumption that regional sales remained relatively stable over time. They required analysis to either confirm this assumption or provide evidence of significant market shifts that should inform budget decisions.</p>
-            
-            <h3>Key Questions</h3>
-            <ol>
-                <li>Have regional sales proportions remained stable over time?</li>
-                <li>When did total global sales peak, and what has happened since?</li>
-                <li>Which regions show the strongest long-term performance?</li>
-                <li>How should marketing budgets be adjusted based on these trends?</li>
-            </ol>
+            <section>
+                <h2>The Challenge</h2>
+                <p>The marketing department sought to answer several critical business questions: How have regional sales patterns evolved over nearly four decades? Which regions demonstrate the strongest growth potential? Should budget allocation strategies shift in response to changing market dynamics? The answers to these questions would directly inform strategic decisions regarding where to concentrate marketing resources for maximum return on investment.</p>
+            </section>
 
-            <h2>Data and Methodology</h2>
-            <h3>Data Preparation</h3>
-            <p>I obtained the VGChartz dataset covering video game sales from 1980 to 2016. I validated the data for missing or duplicate entries and prepared it for analysis in Excel.</p>
+            <section>
+                <h2>Analytical Approach</h2>
+                <p>The analysis commenced with a thorough validation and cleaning of the VGChartz dataset, which encompassed video game sales data spanning from 1980 to 2016. I examined the data for missing values and duplicate entries, ensuring the integrity of all subsequent analyses.</p>
+                
+                <p>Following data preparation, I aggregated sales figures by region and platform using Excel pivot tables. This approach enabled efficient exploration of trends across multiple dimensions simultaneously. I conducted descriptive statistics to establish baseline metrics and performed trend analysis to examine how regional performance evolved over the 36-year period.</p>
+            </section>
 
-            <h3>Analytical Approach</h3>
-            <ul>
-                <li><strong>Descriptive Statistics:</strong> Calculated summary statistics for sales by region, platform, and year</li>
-                <li><strong>Trend Analysis:</strong> Created time series visualisations to examine regional sales evolution</li>
-                <li><strong>Comparative Analysis:</strong> Compared regional performance using absolute figures and percentage of global sales</li>
-            </ul>
+            <section>
+                <h2>Key Findings and Visualisations</h2>
+                <p>The analysis revealed several significant insights that challenged the marketing team's prevailing assumptions:</p>
+                
+                <figure class="case-study-figure">
+                    <img src="../assets/gameco/gameco_1.png" alt="GameCo Regional Sales Analysis Charts showing regional sales trends from 1990 to 2016 and market share composition" class="case-study-image">
+                    <figcaption>Regional sales trends (top) and market share composition (bottom) from 1990 to 2016. The line chart displays sales for North America, Europe, Japan, Other regions, and Global totals. The stacked bar chart illustrates the shifting proportion of each regional market over time.</figcaption>
+                </figure>
+                
+                <p><strong>Peak and Decline:</strong> Total global video game sales peaked in 2008, reaching approximately 680 million units before entering a sustained period of decline. By 2016, global sales had fallen to roughly 280 million units. This finding established an important historical context for understanding regional performance.</p>
+                
+                <p><strong>Regional Divergence:</strong> North America and Europe, historically the dominant markets, demonstrated notable declines following the 2008 peak. In contrast, Japan and the Other regions category exhibited steadier, more resilient performance throughout this period.</p>
+                
+                <p><strong>Shifting Market Composition:</strong> The stacked bar chart reveals a significant transformation in regional market share. North America's dominance (shown in blue) decreased substantially after 2008, whilst the Other regions category (purple) and Japan (green) maintained more consistent proportions. By 2016, the market composition had become notably more balanced than in earlier decades.</p>
+            </section>
 
-            <h2>Key Findings</h2>
-            <h3>Challenging the Stability Assumption</h3>
-            <p>The analysis revealed that GameCo's assumption of stable regional sales was incorrect. Significant shifts occurred over the period studied.</p>
+            <section>
+                <h2>Recommendations</h2>
+                <p>Based upon these findings, I presented the following strategic recommendations to GameCo's marketing leadership:</p>
+                
+                <p><strong>Reassess Regional Budget Allocation:</strong> The historical assumption of stable regional sales is no longer supported by the data. Marketing budgets should be reviewed and adjusted to reflect the evolving market landscape.</p>
+                
+                <p><strong>Invest in Expanding Regions:</strong> Japan and Other markets have demonstrated greater stability and growth potential. These regions merit increased marketing investment and tailored strategies.</p>
+                
+                <p><strong>Adopt an Adaptive Genre Strategy:</strong> Regional preferences for game genres vary considerably. Marketing campaigns should be customised to align with the specific tastes and preferences of each target market.</p>
+                
+                <p><strong>Establish Ongoing Monitoring:</strong> Continue tracking annual regional data in Excel to guide future marketing decisions and identify emerging trends promptly.</p>
+            </section>
 
-            <h3>Global Sales Peaked in 2008</h3>
-            <p>Total video game sales reached their highest point in 2008 before entering a sustained decline. This peak coincided with strong console generations and preceded the rise of mobile gaming.</p>
-
-            <h3>Regional Shifts After 2008</h3>
-            <p>North America and Europe, historically the dominant markets, declined significantly after 2008. Meanwhile, Japan and other regions demonstrated steadier long-term performance, maintaining more consistent sales even as the overall market contracted.</p>
-
-            <h2>Recommendations</h2>
-            <ol>
-                <li><strong>Acknowledge that regional performance varies significantly</strong> over time and should be monitored continuously</li>
-                <li><strong>Recognise that North America and Europe, while strong, are no longer as dominant</strong> as they once were</li>
-                <li><strong>Consider the steady performance of Japan and other regions</strong> when allocating marketing resources</li>
-                <li><strong>Adapt genre strategy</strong> to align with regional preferences</li>
-            </ol>
-
-            <h2>Reflections</h2>
-            <p>This project demonstrated the importance of testing assumptions with data. The marketing team's belief in stable regional sales, while intuitive, did not hold up under analysis. The experience reinforced my appreciation for letting evidence guide business decisions rather than relying on conventional wisdom. Additionally, working extensively with Excel pivot tables and charts strengthened my ability to explore and communicate data efficiently.</p>
+            <section>
+                <h2>Reflections</h2>
+                <p>This project reinforced the value of questioning established assumptions through systematic data analysis. The marketing team's belief in stable regional sales, whilst intuitive, did not withstand scrutiny when examined against nearly four decades of historical data. The experience strengthened my appreciation for allowing evidence to guide business decisions rather than relying upon conventional wisdom.</p>
+                
+                <p>Additionally, working extensively with Excel pivot tables and charts enhanced my ability to explore and communicate data efficiently. The process of translating complex analytical findings into clear, actionable recommendations for non-technical stakeholders drew upon my years of experience in client-facing roles, where clear communication has always been paramount.</p>
+            </section>
         </div>
 
         <nav class="case-study-nav">
-            <a href="../index.html" class="btn btn-secondary">← Back to Projects</a>
+            <a href="../index.html" class="btn btn-secondary">Return to Projects</a>
         </nav>
     </article>
 
@@ -106,7 +111,7 @@
                     <a href="https://public.tableau.com/app/profile/joseph.adamski" target="_blank">Tableau Public</a>
                 </div>
             </div>
-            <p class="footer-copyright">© 2025 Joseph Adamski. All rights reserved.</p>
+            <p class="footer-copyright">© 2026 Joseph Adamski. All rights reserved.</p>
         </div>
     </footer>
 
