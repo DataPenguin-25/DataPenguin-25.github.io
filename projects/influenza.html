@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Influenza Staffing Strategy | Joseph Adamski</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -32,64 +29,91 @@
     <article class="case-study">
         <header class="case-study-header">
             <h1>Influenza Staffing Strategy</h1>
+            <p class="case-study-subtitle">Developing a Data-Driven Staffing Strategy for Flu Season</p>
             <div class="case-study-meta">
                 <span><strong>Role:</strong> Data Analyst</span>
-                <span><strong>Tools:</strong> Tableau, Excel</span>
-                <span><strong>Data:</strong> CDC Mortality Data (2009-2017)</span>
-            </div>
-            <div class="case-study-links">
-                <a href="https://public.tableau.com/views/InfluenzaStaffing" target="_blank">View Tableau Dashboard →</a>
+                <span><strong>Tools:</strong> Tableau, Microsoft Excel</span>
+                <span><strong>Data Sources:</strong> CDC Influenza Mortality Data (2009 to 2017), U.S. Census Population Data</span>
             </div>
         </header>
 
         <div class="case-study-content">
-            <h2>Project Overview</h2>
-            <p>A US medical staffing agency needed to determine where and when to deploy temporary healthcare workers during influenza season to prevent staff shortages at hospitals and clinics. This project analysed CDC mortality data to identify regional and seasonal trends that drive demand for medical personnel.</p>
+            <section>
+                <h2>Project Overview</h2>
+                <p>A United States medical staffing agency faced a recurring challenge: determining where and when to deploy temporary healthcare workers during influenza season to prevent staff shortages in hospitals and clinics. The consequences of inadequate staffing during peak flu periods can be severe, affecting patient care quality and placing undue strain upon permanent medical staff.</p>
+                
+                <p>This project was undertaken to analyse CDC influenza mortality data and identify regional and seasonal trends that drive demand for medical personnel. The objective was to provide actionable, evidence-based recommendations that would enable the agency to allocate resources more effectively.</p>
+            </section>
 
-            <h2>The Challenge</h2>
-            <p>The agency required answers to critical resource planning questions:</p>
-            <ol>
-                <li>Which states experience the highest influenza mortality?</li>
-                <li>When does flu season peak, and how consistent is this timing year to year?</li>
-                <li>What demographic factors correlate with influenza deaths?</li>
-                <li>How should staffing resources be allocated geographically and temporally?</li>
-            </ol>
+            <section>
+                <h2>The Challenge</h2>
+                <p>The staffing agency required answers to several critical questions: Which states experience the highest influenza-related mortality and therefore the greatest demand for additional medical staff? What seasonal patterns govern flu outbreaks, and how can staffing be timed accordingly? Which demographic populations are most vulnerable, and how does this affect resource allocation at the regional level?</p>
+            </section>
 
-            <h2>Data and Methodology</h2>
-            <h3>Data Preparation</h3>
-            <p>I obtained CDC influenza mortality data spanning 2009 to 2017 and merged it with US Census population data by state. The analysis focused particularly on adults aged 65 and older, as this population faces the highest risk of severe influenza outcomes.</p>
+            <section>
+                <h2>Analytical Approach</h2>
+                <p>The analysis began with the acquisition and integration of two primary data sources. I obtained CDC influenza mortality data spanning 2009 to 2017 and combined it with U.S. Census population data. The datasets were cleaned, validated, and merged by state to create a comprehensive analytical foundation.</p>
+                
+                <p>Given the well-documented vulnerability of elderly populations to influenza complications, I focused particular attention on adults aged 65 and above. This demographic lens proved essential in identifying high-risk regions and informing targeted staffing recommendations.</p>
+                
+                <p>I constructed interactive Tableau dashboards to visualise both geographic and seasonal patterns in influenza mortality. The geographic visualisations employed choropleth maps to highlight state-level mortality rates, whilst time series charts revealed the cyclical nature of flu season demand.</p>
+            </section>
 
-            <h3>Analytical Approach</h3>
-            <ul>
-                <li><strong>Geographic Analysis:</strong> Created choropleth maps in Tableau to visualise mortality rates by state</li>
-                <li><strong>Temporal Analysis:</strong> Examined monthly mortality patterns across multiple years</li>
-                <li><strong>Correlation Analysis:</strong> Tested the relationship between elderly population size and influenza deaths</li>
-            </ul>
+            <section>
+                <h2>Key Findings and Visualisations</h2>
+                <p>The analysis yielded several significant insights with direct implications for staffing strategy:</p>
+                
+                <figure class="case-study-figure" style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/influenza/influenza_2.png" alt="U.S. choropleth map showing flu deaths by state from 2009 to 2017" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: #666; font-style: italic;">Geographic distribution of influenza deaths across the United States (2009 to 2017). Darker shading indicates higher mortality, with California, Texas, New York, Florida, and Pennsylvania emerging as the highest-impact states.</figcaption>
+                </figure>
+                
+                <p><strong>High-Risk States:</strong> The choropleth map above reveals that California, Texas, New York, Florida, and Pennsylvania experienced the highest absolute numbers of influenza deaths. These states, shown in the darkest shading, reflect both their large overall populations and substantial elderly demographics. The red circles indicate concentrated areas of mortality requiring priority staffing attention.</p>
+                
+                <p><strong>Demographic Correlation:</strong> A strong positive correlation (r ≈ 0.9) was identified between the size of a state's elderly population and the number of influenza-related deaths. This finding confirmed the importance of prioritising states with large populations of adults aged 65 and above.</p>
+                
+                <figure class="case-study-figure" style="margin: 2rem 0; text-align: center;">
+                    <img src="../assets/influenza/influenza_1.png" alt="Seasonal Demand chart showing deaths from flu by month across years 2009 to 2017" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: #666; font-style: italic;">Seasonal demand patterns showing influenza deaths by month from 2009 to 2017. The chart reveals consistent peaks during the winter months (December through March) across all years analysed.</figcaption>
+                </figure>
+                
+                <p><strong>Seasonal Patterns:</strong> The seasonal demand chart demonstrates that influenza mortality consistently peaks between December and March each year. Across all nine years analysed, deaths from flu reached approximately 7,000 to 10,000 per month during winter peaks, declining to around 5,000 during summer months. This predictable seasonality enables proactive staffing decisions.</p>
+                
+                <p><strong>Year-to-Year Variation:</strong> Whilst the seasonal pattern remained consistent, the chart reveals variation in peak severity between years. The 2009 season (shown in dark blue) exhibited notably higher mortality in early months, likely reflecting the H1N1 pandemic that year.</p>
+            </section>
 
-            <h2>Key Findings</h2>
-            <h3>Strong Correlation with Elderly Population</h3>
-            <p>A strong correlation (r ≈ 0.9) emerged between elderly population and flu deaths, confirming that states with larger populations aged 65 and older require greater staffing resources.</p>
+            <section>
+                <h2>Recommendations</h2>
+                <p>Based upon these findings, I presented the following strategic recommendations to the medical staffing agency:</p>
+                
+                <p><strong>Prioritise High-Risk States:</strong> Concentrate staffing resources in California, Texas, New York, Florida, and Pennsylvania, where demand is consistently highest as demonstrated in the geographic visualisation.</p>
+                
+                <p><strong>Deploy Seasonally:</strong> Position additional personnel in target regions from November through March to align with the established peak period for influenza activity, as clearly demonstrated in the seasonal demand chart.</p>
+                
+                <p><strong>Target Elderly Care Facilities:</strong> Focus specialised resources in regions with large elderly populations, particularly nursing homes and long-term care facilities where vulnerability is greatest.</p>
+                
+                <p><strong>Implement Dynamic Monitoring:</strong> Monitor CDC data on a weekly basis during flu season to enable rapid adjustments to staffing allocations as conditions evolve.</p>
+                
+                <p><strong>Future Enhancement:</strong> Expand the dataset to include more recent years and develop predictive forecasting tools to anticipate future flu season severity.</p>
+            </section>
 
-            <h3>Consistent Winter Peak</h3>
-            <p>Influenza mortality consistently peaked between December and March each year, with January and February typically showing the highest case volumes.</p>
+            <section>
+                <h2>Reflections</h2>
+                <p>This project exemplified the power of data visualisation in communicating complex patterns to stakeholders. The Tableau dashboards transformed raw mortality statistics into intuitive, interactive tools that enabled decision-makers to explore the data and understand the underlying trends without requiring technical expertise.</p>
+                
+                <p>The work also reinforced my appreciation for the human impact of analytical work. Behind every data point was a real person and family affected by influenza. Knowing that the recommendations derived from this analysis could help ensure adequate medical staffing and improve patient outcomes made the work particularly meaningful.</p>
+                
+                <p>My background in client-facing roles, where I regularly translated technical information into actionable guidance for diverse audiences, proved invaluable in presenting these findings in a manner that resonated with healthcare administrators and staffing coordinators alike.</p>
+            </section>
 
-            <h3>High-Risk States</h3>
-            <p>California, Texas, New York, Florida, and Pennsylvania recorded the highest total flu deaths, reflecting their large populations and significant elderly communities.</p>
-
-            <h2>Recommendations</h2>
-            <ol>
-                <li><strong>Prioritise staffing</strong> in high-risk states (California, Texas, New York, Florida, Pennsylvania)</li>
-                <li><strong>Deploy additional personnel</strong> during November through March</li>
-                <li><strong>Focus specialised resources</strong> in regions with large elderly populations</li>
-                <li><strong>Monitor CDC data weekly</strong> to adjust staffing dynamically as the season progresses</li>
-            </ol>
-
-            <h2>Reflections</h2>
-            <p>This project demonstrated the practical value of data visualisation for resource planning. The Tableau dashboards enabled stakeholders to quickly grasp geographic and temporal patterns that would be difficult to communicate through tables alone. My experience explaining technical concepts to non-technical audiences proved valuable in framing recommendations for agency leadership.</p>
+            <section>
+                <h2>Project Links</h2>
+                <p><a href="https://public.tableau.com/app/profile/joseph.adamski" target="_blank" class="btn btn-primary">View Tableau Dashboard</a></p>
+            </section>
         </div>
 
         <nav class="case-study-nav">
-            <a href="../index.html" class="btn btn-secondary">← Back to Projects</a>
+            <a href="../index.html" class="btn btn-secondary">Return to Projects</a>
         </nav>
     </article>
 
@@ -107,7 +131,7 @@
                     <a href="https://public.tableau.com/app/profile/joseph.adamski" target="_blank">Tableau Public</a>
                 </div>
             </div>
-            <p class="footer-copyright">© 2025 Joseph Adamski. All rights reserved.</p>
+            <p class="footer-copyright">© 2026 Joseph Adamski. All rights reserved.</p>
         </div>
     </footer>
 
